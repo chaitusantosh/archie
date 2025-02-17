@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+.content {
+  flex: 1; /* Allow the content to grow and push the footer to the bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+app-footer {
+  background-color: #f8f9fa; /* Optional: Style the footer */
+  border-top: 1px solid #ddd; /* Optional: Add a top border */
+  text-align: center; /* Center the footer content */
+}
+
+.content {
+  position: relative;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

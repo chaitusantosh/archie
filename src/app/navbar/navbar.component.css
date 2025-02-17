@@ -1,0 +1,28 @@
+/* Default Navbar */
+.navbar {
+  transition: background-color 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Transparent Navbar Initially */
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+/* Navbar After Scrolling */
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.7) !important; /* Dark with opacity */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+a{
+  text-decoration: none;
+  color:aliceblue;
+}
+.navbar-logo {
+  height: 70px; /* Adjust this size based on your logo's aspect ratio */
+  width: auto;  /* Maintain aspect ratio */
+}
+
+li a:hover{
+color:rgb(165, 75, 42);
+}

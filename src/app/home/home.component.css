@@ -1,0 +1,87 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url('/background.jpg') center/cover no-repeat;
+  background-attachment: scroll;
+  /*SetviaJS*/display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  padding: 20px;
+  transition: background-position 0.1s ease-out;
+  -webkit-transition: background-position 0.1s ease-out;
+  -moz-transition: background-position 0.1s ease-out;
+  -ms-transition: background-position 0.1s ease-out;
+  -o-transition: background-position 0.1s ease-out;
+}
+
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes expandText {
+  0% {
+    letter-spacing: 0px;
+    opacity: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transform: translateY(-200px) scaleX(0.8);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transform: translateY(-200px) scaleX(1.1);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+    transform: translateY(-200px) scaleX(1);
+  }
+}
+
+.hero-section h1 {
+  position: relative;
+  z-index: 2;
+  padding: 10px 20px;
+  font-size: 120px;
+  font-weight: bold;
+  transform: translateY(-200px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: expandText 1.5s ease-out forwards;
+}
+
+/* Subtle hover effect without removing animation */
+
+.hero-section h2 {
+  position: relative;
+  transform: translateY(-220px);
+  /*Movesitup*/-webkit-transform: translateY(-150px);
+  -moz-transform: translateY(-220px);
+  -ms-transform: translateY(-220px);
+  -o-transform: translateY(-220px);
+  -webkit-transform: translateY(-220px);
+}
+/* Container for text at the bottom */
+.hero-section div {
+  position: absolute;
+  bottom: 80px; /* Adjust as needed */
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+p {
+  font-size: 20px;
+  margin: 5px 0;
+}
